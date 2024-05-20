@@ -1,0 +1,44 @@
+participant main.js
+participant cattle.js
+participant drovers.js
+participant journey.js
+participant database.js
+participant utils.js
+participant Console
+
+main.js -> cattle.js: require("./cattle.js")
+cattle.js -> database.js: require("./database.js")
+database.js --> cattle.js: Return cattleTypes
+cattle.js -> main.js: Return roundup function
+
+main.js -> drovers.js: require("./drovers.js")
+drovers.js -> database.js: require("./database.js")
+database.js --> drovers.js: Return drovers
+drovers.js -> main.js: Export hireDrovers function
+
+main.js -> journey.js: require("./journey.js")
+journey.js -> utils.js: require("./utils.js")
+journey.js -> main.js: Export journeyMaker function
+
+main.js -> cattle.js: Call roundup function with cattleToDrive parameter
+cattle.js -> database.js: Access cattleTypes
+database.js --> cattle.js: Return cattleTypes
+cattle.js -> Generate cattle array based on cattleToDrive
+cattle.js -> main.js: Return cattle array
+
+main.js -> drovers.js: Call hireDrovers function with cattleToDrive parameter
+drovers.js -> database.js: Access drovers
+database.js --> drovers.js: Return drovers
+drovers.js -> Generate droversOut array based on cattleToDrive
+drovers.js -> main.js: Return droversOut array
+
+main.js -> journey.js: Call journeyMaker function
+journey.js -> Create areas object with random values for rivers, forests, mountains, and plains
+journey.js -> Iterate through areas and generate journey array with appropriate terrain types
+journey.js -> Randomize journey array using utils.js
+journey.js -> main.js: Return randomized journey array
+
+main.js -> Console: Output art with Kansas Slim's Cattle Logo
+main.js -> Console: Output number of drovers and cattle, and their breeds
+main.js -> Console: Output team of drovers
+main.js -> Console: Output journey terrain

@@ -2,27 +2,26 @@ In the main module, one of the first lines of code is
 const drovers = hireDrovers(cattleToDrive). Explain 
 what the value of the drovers variable is when that line of code runs.
 
-The const drovers is defined in the database.js file, it is used to catagorize
-the array containing the information about the different drovers. 
-When the function is called and ran it is choosing 5 drovers to lead the cattle. It chooses 5 
-drovers because it takes the total number of cattle and divides it by 10, assigning
-each drover to 10 cattle.
+   The const drovers is defined in the database.js file, it is used to catagorize
+   the array containing the information about the different drovers. 
+   When the function is called and ran, it is choosing 5 different drovers to lead the cattle. 
+   It chooses 5 drovers because the numberNeeded constant stated to divide the total number of cattle (cattleToDrive) and to divide it by 10. 
 
 At the bottom of the main module, you will see the 
 following code - for (const drover of drovers). Explain 
 what the values of both the drover and the drovers variables are.
 
-Drover represents each element inside of the drovers array. While drovers
- represents all of the object in the array, the drovers functions randomly 
- chooses a variable from the drover array. When a drover is chosen it is 
-outputed in the main.js file in order of first name, last name. 
+   Drover represents each element inside of the drovers array. While drovers
+   represents all of the object in the array, the drovers functions randomly 
+   chooses a variable from the drover array. When a drover is chosen it is 
+   outputed in the main.js file in order of first name, last name. 
 
 In the journey module, there is a journeyMaker() function.
- In that function, there is a variable named areas which 
- will have the value of an object. Use your debugger to 
- show what the value of each key is on that object. Use Loom to record your session.
+In that function, there is a variable named areas which 
+will have the value of an object. Use your debugger to 
+show what the value of each key is on that object. Use Loom to record your session.
 
-https://www.loom.com/share/4ad4644c51834e81b8f2ff2a22988eee?sid=91cae433-7ad6-4d4d-ac6c-597ac53af5d6
+   https://www.loom.com/share/4ad4644c51834e81b8f2ff2a22988eee?sid=91cae433-7ad6-4d4d-ac6c-597ac53af5d6
 
 Also in the journey module, there is the following code:
 for (let forestNumber = 0; forestNumber < areas.forests; forestNumber++) {
@@ -30,15 +29,17 @@ for (let forestNumber = 0; forestNumber < areas.forests; forestNumber++) {
 }
 Explain this code with your best vocabulary.
 
-The loop starts by initializing forestNumber to 0. The loop will continue to execute as long as forestNumber is less than the number of forests present in the areas object. The forestNumber++ allows the output to include more than one variable in increments of 1. The journey.push("forest") outputs the term forest. 
+   The for loop starts by initializing forestNumber to 0. The loop will continue to execute
+   as long as forestNumber is less than the number of forests present in the areas object.
+   The forestNumber++ allows the output to include more than one variable in increments of 1.
+   The journey.push("forest") outputs the term forest. 
 
 Explain the value of the database variable in the database module. Be as comprehensive as possible.
 
-The database variable serves as a way to connect the database data to the rest of the executable code. It makes it easy to access and scan through so that certain functions can output specific information from it.
+   The database variable serves as a way to connect the database data to the rest of the executable code. It makes it easy to access and to scan through so that certain functions can gather specific information from it. For example, when trying to find the names of the drovers, instead of having an array for each class of name (first,last), theyre both grouped under the same "drovers" array. Since database defines all of this information unders a single constant variable, functions can be called to find the information theyre looking for by classifying the array.
 
 In the drovers module, there is a hireDrovers() function. You will
  notice the following code on that line - (herdSize). What is that 
  defining, and where does it get its value?
 
-The herdSize parameter enables the hireDrovers() function to change
-how it will be executed. The herdSize represents a paramater decleration, so when the variable changes, the output will change as well. Its value is defined in the constant "cattleToDrive" which is set to 50.
+   The herdSize parameter enables the hireDrovers() function to change how it will be executed. The herdSize represents a paramater decleration, so when the variable changes, the output will change as well. Its value is defined in the constant "cattleToDrive" which is set to 50.
